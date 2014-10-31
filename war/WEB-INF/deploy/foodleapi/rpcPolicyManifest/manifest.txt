@@ -1,0 +1,3 @@
+# Module foodleapi
+# RPC service class, partial path of RPC policy file
+com.belanger.simon.apis.client.GreetingService, 195FA54710B6449DA4D089E848E35D7B.gwt.rpc

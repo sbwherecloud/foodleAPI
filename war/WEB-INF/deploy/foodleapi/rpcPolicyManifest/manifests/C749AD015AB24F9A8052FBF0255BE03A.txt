@@ -1,0 +1,2 @@
+serviceClass: com.belanger.simon.apis.client.GreetingService
+path: 195FA54710B6449DA4D089E848E35D7B.gwt.rpc

@@ -1,0 +1,435 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://imperial-vector-669.appspot.com/_ah/api",
+  "name" : "myApi",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://imperial-vector-669.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "apis.simon.belanger.com",
+  "ownerName" : "apis.simon.belanger.com",
+  "methods" : {
+    "myApi.getUserProfile" : {
+      "path" : "userprofile/{userEmail}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com" ],
+      "clientIds" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com", "replace this with your Android client ID", "replace this with your iOS client ID", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.belanger.simon.apis.YourFirstAPI.getUserProfile",
+      "request" : {
+        "parameters" : {
+          "userEmail" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "myApi.insertUserProfile" : {
+      "path" : "userprofile",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com" ],
+      "clientIds" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com", "replace this with your Android client ID", "replace this with your iOS client ID", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.belanger.simon.apis.YourFirstAPI.insertUserProfile",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "myApi.updateContactList" : {
+      "path" : "contacts/{askerEmail}/{userEmail}/{contactRequestAccepted}",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com" ],
+      "clientIds" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com", "replace this with your Android client ID", "replace this with your iOS client ID", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.belanger.simon.apis.YourFirstAPI.updateContactList",
+      "request" : {
+        "parameters" : {
+          "askerEmail" : {
+            "type" : "string",
+            "required" : true
+          },
+          "userEmail" : {
+            "type" : "string",
+            "required" : true
+          },
+          "contactRequestAccepted" : {
+            "type" : "boolean",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "myApi.getContactList" : {
+      "path" : "contacts/{userEmail}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com" ],
+      "clientIds" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com", "replace this with your Android client ID", "replace this with your iOS client ID", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.belanger.simon.apis.YourFirstAPI.getContactList",
+      "request" : {
+        "parameters" : {
+          "userEmail" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "myApi.updateVote" : {
+      "path" : "vote/{voteId}",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com" ],
+      "clientIds" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com", "replace this with your Android client ID", "replace this with your iOS client ID", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.belanger.simon.apis.YourFirstAPI.updateVote",
+      "request" : {
+        "parameters" : {
+          "voteId" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "myApi.getVote" : {
+      "path" : "vote/{voteId}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com" ],
+      "clientIds" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com", "replace this with your Android client ID", "replace this with your iOS client ID", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.belanger.simon.apis.YourFirstAPI.getVote",
+      "request" : {
+        "parameters" : {
+          "voteId" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "myApi.insertVote" : {
+      "path" : "vote",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com" ],
+      "clientIds" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com", "replace this with your Android client ID", "replace this with your iOS client ID", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.belanger.simon.apis.YourFirstAPI.insertVote",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "myApi.updateGcmRegistrationId" : {
+      "path" : "userprofile/{userEmail}/{gcmRegistrationId}",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com" ],
+      "clientIds" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com", "replace this with your Android client ID", "replace this with your iOS client ID", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.belanger.simon.apis.YourFirstAPI.updateGcmRegistrarionId",
+      "request" : {
+        "parameters" : {
+          "userEmail" : {
+            "type" : "string",
+            "required" : true
+          },
+          "gcmRegistrationId" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "myApi.setContactRequest" : {
+      "path" : "setContactRequest/{contactEmail}",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com" ],
+      "clientIds" : [ "573624315414-hqmmhq3pu2gvdla4otj2njhkdtdgoeqn.apps.googleusercontent.com", "replace this with your Android client ID", "replace this with your iOS client ID", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.belanger.simon.apis.YourFirstAPI.setContactRequest",
+      "request" : {
+        "parameters" : {
+          "contactEmail" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "UserProfile" : {
+        "id" : "UserProfile",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "firstName" : {
+            "type" : "string"
+          },
+          "lastName" : {
+            "type" : "string"
+          },
+          "gcmRegistrationId" : {
+            "type" : "string"
+          },
+          "contactsEmail" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "contactList" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Contact"
+            }
+          }
+        }
+      },
+      "Key" : {
+        "id" : "Key",
+        "type" : "object",
+        "properties" : {
+          "kind" : {
+            "type" : "string"
+          },
+          "appId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "parent" : {
+            "$ref" : "Key"
+          },
+          "complete" : {
+            "type" : "boolean"
+          },
+          "namespace" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Contact" : {
+        "id" : "Contact",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "firstName" : {
+            "type" : "string"
+          },
+          "lastName" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Contacts" : {
+        "id" : "Contacts",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "contactList" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Contact"
+            }
+          },
+          "contacts" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "IntegerListContainer" : {
+        "id" : "IntegerListContainer",
+        "type" : "object",
+        "properties" : {
+          "integersList" : {
+            "type" : "array",
+            "items" : {
+              "type" : "integer"
+            }
+          }
+        }
+      },
+      "Vote" : {
+        "id" : "Vote",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "voteCreatorEmail" : {
+            "type" : "string"
+          },
+          "recipes" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "recipeVotes" : {
+            "type" : "array",
+            "items" : {
+              "type" : "integer"
+            }
+          },
+          "votersEmail" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "endTimeInMillis" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "voteCreatorInformation" : {
+            "$ref" : "Contact"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.belanger.simon.apis.YourFirstAPI.getUserProfile" : {
+        "response" : {
+          "$ref" : "UserProfile"
+        }
+      },
+      "com.belanger.simon.apis.YourFirstAPI.insertUserProfile" : {
+        "request" : {
+          "$ref" : "Contact"
+        },
+        "response" : {
+          "$ref" : "UserProfile"
+        }
+      },
+      "com.belanger.simon.apis.YourFirstAPI.updateContactList" : {
+        "response" : {
+          "$ref" : "Contacts"
+        }
+      },
+      "com.belanger.simon.apis.YourFirstAPI.getContactList" : {
+        "response" : {
+          "$ref" : "Contacts"
+        }
+      },
+      "com.belanger.simon.apis.YourFirstAPI.updateVote" : {
+        "request" : {
+          "$ref" : "IntegerListContainer"
+        },
+        "response" : {
+          "$ref" : "Vote"
+        }
+      },
+      "com.belanger.simon.apis.YourFirstAPI.getVote" : {
+        "response" : {
+          "$ref" : "Vote"
+        }
+      },
+      "com.belanger.simon.apis.YourFirstAPI.insertVote" : {
+        "request" : {
+          "$ref" : "Vote"
+        },
+        "response" : {
+          "$ref" : "Vote"
+        }
+      },
+      "com.belanger.simon.apis.YourFirstAPI.updateGcmRegistrarionId" : {
+        "response" : {
+          "$ref" : "UserProfile"
+        }
+      },
+      "com.belanger.simon.apis.YourFirstAPI.setContactRequest" : {
+        "request" : {
+          "$ref" : "Contact"
+        },
+        "response" : {
+          "$ref" : "Contact"
+        }
+      }
+    }
+  }
+}
